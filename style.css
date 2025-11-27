@@ -1,28 +1,15 @@
 /* style.css */
 
 body {
-    body {
-    /* [1] Atur foto background */
-    background-image: url('haloo33.jpg'); /* GANTI DENGAN NAMA FILE FOTO ANDA */
-    
-    /* [2] Atur agar foto menutupi seluruh layar */
-    background-size: cover;
-    
-    /* [3] Pusatkan foto */
-    background-position: center;
-    
-    /* [4] Pastikan foto tidak mengulang */
-    background-repeat: no-repeat;
-    
-    /* [5] Biarkan foto tetap di tempat saat di-scroll (opsional) */
-    background-attachment: fixed;
-    
-    /* CATATAN: Hapus properti yang mungkin mengganggu seperti background-color */
+    font-family: Arial, sans-serif; /* Font simple */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Warna latar belakang umum */
+    color: #333;
 }
-    
 
 header {
-    background-color: rgba(0,  123,  255,0.7; /* Biru terang untuk header */
+    background-color: #007BFF; /* Biru terang untuk header */
     color: white;
     padding: 15px 20px;
     text-align: center;
@@ -30,7 +17,7 @@ header {
 }
 
 nav {
-    background-color: rgba(0,  86,  179,0.7; /* Biru yang lebih gelap untuk navigasi */
+    background-color: #0056b3; /* Biru yang lebih gelap untuk navigasi */
     padding: 10px 20px;
     text-align: center;
 }
@@ -53,7 +40,7 @@ nav a:hover {
     padding: 20px;
     max-width: 900px;
     margin: 20px auto;
-    background-color: rgba(255,  255,  255,0.85;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
