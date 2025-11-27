@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Web Statis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web Portfolio Saya</h1>
+        <p>Menu Utama Dashboard</p>
+    </header>
+
+    <nav>
+        <a href="#home">🏠 Halaman Utama</a>
+        <a href="#info">ℹ️ Informasi</a>
+        <a href="#contact">📞 Contact</a>
+        <a href="#resources">📚 Resources</a>
+        <a href="index.html">🚪 Log Out</a>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="content-section">
+            <h2>🏠 Selamat Datang di Dashboard!</h2>
+            <p><strong>HALO, SELAMAT DATANG KEMBALI DI ANTARMUKA WEB STATIS SAYA💋</strong>
+            <p><strong>JANGAN RAGU UNTUK MENJELAJAHI SETIAP BAGIAN!🎉</strong>
+        </div>
+
+       
+<div id="info" class="content-section">
+            <h2>ℹ️ Informasi Mengenai Kami</h2>
+            
+    <p><strong>NAMA:</strong> VALENTINO RAMADHANI.</p>
+    <p><strong>VISI:</strong>  Menjadi sumber inspirasi digital terdepan💦.
+    <p><strong>MISI:</strong> Menyajikan konten yang relevan dan mendidik.
+           
+
+</div>
+
+        <div id="contact" class="content-section">
+            <h2>📞 Hubungi Kami</h2>
+            <p><strong>Silakan hubungi kami melalui platform media sosial di bawah ini. Klik pada ikon untuk langsung diarahkan.</strong></p>
+            
+            <div class="social-icons">
+                <a href="https://wa.me/085706556255" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                </a>
+                <a href="https://www.instagram.com/_palnzzz" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram" style="color: #E1306C;"></i>
+                </a>
+                <a href="https://www.tiktok.com/@palenn11.30" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok" style="color: #000000;"></i>
+                </a>
+            </div>
+            
+            <p style="margin-top: 20px;"><strong>Jangan malu malu</strong></p>
+        </div>
+
+       <div id="resources" class="content-section">
+    <h2>📚 Sumber Daya Tambahan</h2>
+    
+    <p><strong>Yuk jelajahi website ini. </strong>🕹️</p>
+    
+    <ul>
+        <li>
+            <a href="https://www.coolmathgames.com/" target="_blank">Coolmath Games (Link 1)</a>
+        </li>
+        <li>
+            <a href="https://agar.io/" target="_blank">Agar.io (Link 2)</a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/" target="_blank">W3Schools (Link 3)</a>
+        </li>
+    </ul>
+</div>
+
+    <script>
+    
+document.addEventListener('DOMContentLoaded', function() {
+    // Ambil semua section konten
+    const sections = document.querySelectorAll('.content-section');
+
+    // Fungsi untuk menyembunyikan semua section
+    function hideAllSections() {
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+    }
+
+    // Fungsi untuk menampilkan section yang sesuai hash
+    function showSection() {
+        hideAllSections();
+        const hash = window.location.hash || '#home'; // Default ke #home
+        const targetSection = document.querySelector(hash);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // KODE PERBAIKAN LINK EKSTERNAL
+    // ------------------------------------------------------------------
+    
+    // Ambil semua tag <a> di halaman (link)
+    const allLinks = document.querySelectorAll('a');
+
+    allLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Cek apakah link dimulai dengan '#' (link internal)
+            if (href && href.startsWith('#')) {
+                // Jika link internal, cegah aksi default
+                e.preventDefault(); 
+                
+                // Lakukan navigasi internal
+                window.location.hash = href;
+                showSection(); 
+            } 
+            // Jika link eksternal (https://...), biarkan browser membukanya secara normal.
+        });
+    });
+
+    // Tampilkan section saat halaman pertama kali dimuat
+    showSection(); 
+    // Tambahkan event listener untuk perubahan hash di URL
+    window.addEventListener('hashchange', showSection);
+});
+</script>
+</body>
+</html>
+

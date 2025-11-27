@@ -1,0 +1,149 @@
+/* style.css */
+
+body {
+    body {
+    /* [1] Atur foto background */
+    background-image: url('haloo33.jpg'); /* GANTI DENGAN NAMA FILE FOTO ANDA */
+    
+    /* [2] Atur agar foto menutupi seluruh layar */
+    background-size: cover;
+    
+    /* [3] Pusatkan foto */
+    background-position: center;
+    
+    /* [4] Pastikan foto tidak mengulang */
+    background-repeat: no-repeat;
+    
+    /* [5] Biarkan foto tetap di tempat saat di-scroll (opsional) */
+    background-attachment: fixed;
+    
+    /* CATATAN: Hapus properti yang mungkin mengganggu seperti background-color */
+}
+    
+
+header {
+    background-color: rgba(0,  123,  255,0.7; /* Biru terang untuk header */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: rgba(0,  86,  179,0.7; /* Biru yang lebih gelap untuk navigasi */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    background-color: #004085;
+}
+
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255,  255,  255,0.85;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Khusus untuk Halaman Login */
+.login-box {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling untuk Konten Dashboard */
+.content-section {
+    padding: 20px 0;
+}
+
+h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* Styling untuk Icon Kontak */
+.social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 30px; /* Ukuran icon */
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* Ukuran Font dan Penyesuaian Responsif (Simpel) */
+/* Menggunakan relative units (em, %) untuk penyesuaian */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+/* style.css - Tambahkan di bagian mana saja */
+
+nav a.active {
+    background-color: #00A0FF; /* Biru yang sedikit berbeda untuk highlight */
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+
+
